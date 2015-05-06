@@ -1,0 +1,5 @@
+AuthUserFile \home\insangel\public\.htpasswd
+AuthName "Authorization Form Title"
+AuthType Basic
+
+require valid-user

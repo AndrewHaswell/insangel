@@ -1,0 +1,27 @@
+.cms_edit a, .cms_delete a {
+  font-size:       8pt;
+  margin-right:    8px;
+  text-decoration: none;
+  }
+
+.cms_edit a:hover, .cms_delete a:hover {
+  text-decoration: underline;
+  }
+
+.cms_edit a {
+  color: darkgreen;
+  }
+
+.cms_delete a {
+  color: #a30600;
+  }
+
+.cms_title {
+  display:       block;
+  font-weight:   bold;
+  margin-bottom: 5px;
+  }
+
+.cms_link {
+  margin-bottom: 15px;
+  }

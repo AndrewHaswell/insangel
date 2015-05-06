@@ -1,0 +1,46 @@
+.gig {
+  padding-bottom: 18px;
+  }
+
+.gig_title {
+  font-weight: bold;
+  font-size:   14pt;
+  color:       #292663;
+  }
+
+#side_bar_text .gig_title {
+  color:         #c2c2c2;
+  font-size:     12pt;
+  border-bottom: 1px dotted white;
+  margin:        5px 0;
+  }
+
+#side_bar_text .gig_details {
+  font-size: 10pt;
+  margin:    3px 0;
+  }
+
+#side_bar_text .gig_details a {
+  text-decoration: none;
+  color:           inherit;
+  }
+
+#side_bar_text .gig_details a:hover {
+  text-decoration: underline;
+  color:           #899b9a;
+  }
+
+.gig_venue {
+  font-style: italic;
+  }
+
+.gig_subtitle {
+  font-weight: bold;
+  font-size:   12pt;
+  color:       #292663;
+  font-style:  italic;
+  }
+
+.gig_bands {
+  padding: 5px 0;
+  }
