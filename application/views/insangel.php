@@ -44,7 +44,7 @@
   <?= empty($side_bar) ? '<style>#body_text {width:100%}</style>' : '' ?>
   <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
   <script>tinymce.init({
-      selector: 'textarea', invalid_elements: "style", plugins: "image"
+      selector : "textarea:not(.no_editor)", invalid_elements: "style", plugins: "image"
     });</script>
 </head>
 <body>
