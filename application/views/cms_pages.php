@@ -1,5 +1,6 @@
 <h1>CMS Pages</h1>
 <?php
+echo '<div class="cms_link"><span class="cms_edit"><a href="' . URL::site('/cms/upload_gig_guide/') . '">Upload gig guide</a></span></div>';
 echo '<div class="cms_link"><span class="cms_edit"><a href="' . URL::site('/cms/edit_cms/') . '">Add new page</a></span></div>';
 if (!empty($cms_pages) && is_array($cms_pages)) {
   foreach ($cms_pages as $cms_page) {

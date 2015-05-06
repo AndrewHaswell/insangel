@@ -63,6 +63,21 @@ Class Controller_Cms extends Controller_Insangel
     $this->template->message->cms_pages = $cms_pages;
   }
 
+  public function action_upload_gig_guide()
+  {
+    $this->template->message = View::factory('gig_guide_upload');
+    $this->template->title = 'Gig Guide Upload';
+  }
+
+  public function action_save_gig_test()
+  {
+    if (!empty($_POST['upload'])) {
+      file_put_contents('public/gigListTest.txt', $_POST['upload']);
+      $this->redirect('/cms/test_gigs');
+    }
+    exit('No data entered.');
+  }
+
   /**
    * @author Andrew Haswell
    */
@@ -100,7 +115,7 @@ Class Controller_Cms extends Controller_Insangel
 
   public function action_test_gigs()
   {
-    $gig_guide = guide::parse_gig_guide('public/test_gigList.txt');
+    $gig_guide = guide::parse_gig_guide('public/gigListTest.txt');
 
     $this->template->title = 'Gigs';
     $this->template->styles += ['public/css/gigs.css' => 'screen'];
@@ -108,8 +123,16 @@ Class Controller_Cms extends Controller_Insangel
     $this->template->message = View::factory('gig_parse_test');
     $this->template->message->gig_guide = $gig_guide['gigs'];
     $this->template->message->cover_gig_guide = $gig_guide['cover_gigs'];
+  }
 
+  /**
+   * @author Andrew Haswell
+   */
 
+  public function action_test_to_live()
+  {
+    copy('public/gigListTest.txt', 'public/gigListTest2.txt');
+    $this->redirect('/gigs/');
   }
 
   /**

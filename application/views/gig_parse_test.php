@@ -22,8 +22,7 @@ if (!empty($gig_guide) && is_array($gig_guide)) {
     if (!empty($gig['bands']) && is_array($gig['bands'])) {
       $this_lineup = [];
       foreach ($gig['bands'] as $id => $band) {
-        $this_lineup[] = (strtolower($band) != 'tbc') ? '<a href="#">' . $band . '</a>'
-          : 'TBC';
+        $this_lineup[] = (strtolower($band) != 'tbc') ? '<a href="#">' . $band . '</a>' : 'TBC';
       }
 
       echo implode(' &bull; ', $this_lineup);
@@ -58,4 +57,6 @@ if (!empty($cover_gig_guide) && is_array($cover_gig_guide)) {
     echo '</div>';
   }
 }
+echo '<h3>Happy with the results? <a href="/cms/test_to_live" onclick="return confirm(\'Are you sure you want to go live?\')">Click here to go live!</a></h3>';
+echo '<h3>Not worked? <a href="javascript:history.back()" onclick="return confirm(\'Are you sure you want to go back?\')">Click here to go back!</a></h3>';
 ?>
